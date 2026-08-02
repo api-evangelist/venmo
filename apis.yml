@@ -1,7 +1,27 @@
 aid: venmo
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/venmo.png
 name: Venmo
-description: 'Venmo is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  Venmo is a US mobile payments service owned by PayPal that lets people send,
+  receive, and split money with friends, pay approved businesses, and hold a
+  balance backed by a debit and credit card. For developers, Venmo does not
+  publish a standalone first-party public API; the historical developer.venmo.com
+  OAuth API is no longer offered to new developers. Instead, "Pay with Venmo" is
+  exposed to US merchants through PayPal Braintree via its GraphQL API and the
+  Android, iOS, and JavaScript SDKs, with webhooks and a Braintree sandbox for
+  testing. Venmo's compliance and vulnerability-disclosure posture is inherited
+  from PayPal (Level 1 PCI DSS, SOC 2 Type 2, PayPal Bug Bounty on HackerOne).
 url: https://raw.githubusercontent.com/api-evangelist/venmo/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,10 +31,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Consumer
+- Payments
+- Fintech
+- Mobile Payments
+- P2P Payments
+- Money Transfer
+- Digital Wallet
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,4 +49,33 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://www.venmo.com
+  url: https://www.venmo.com
+- type: DeveloperPortal
+  url: https://developer.paypal.com/braintree/docs/guides/venmo/overview
+- type: Documentation
+  url: https://developer.paypal.com/braintree/docs/guides/venmo/overview
+- type: APIReference
+  url: https://developer.paypal.com/braintree/graphql/integration_guides/venmo/
+- type: HelpCenter
+  url: https://help.venmo.com/cs/home
+- type: TermsOfService
+  url: https://venmo.com/legal/us-user-agreement
+- type: PrivacyPolicy
+  url: https://venmo.com/legal/us-privacy-policy
+- type: DomainSecurity
+  url: security/venmo-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/venmo-vulnerability-disclosure.yml
+- type: Security
+  url: security/venmo-vulnerability-disclosure.yml
+- type: TrustCenter
+  url: security/venmo-trust-center.yml
+- type: Conformance
+  url: conformance/venmo-conformance.yml
+- type: Compliance
+  url: conformance/venmo-conformance.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1

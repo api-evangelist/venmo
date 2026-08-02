@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  Braintree/PayPal compliance docs + Venmo security page. Venmo has no first-party
+  public OpenAPI; its developer surface is Pay with Venmo via PayPal Braintree.
+standards:
+- id: pci_dss
+  conforms: true
+  version: v4.0.1
+  evidence: >-
+    PayPal Braintree is a validated Level 1 PCI DSS compliant service provider that
+    supports Pay with Venmo (US). Venmo holds PCI DSS certification against v4.0.1.
+  source: https://developer.paypal.com/braintree/articles/risk-and-security/compliance/pci-compliance
+- id: soc2
+  conforms: true
+  evidence: >-
+    PayPal (parent of Venmo) publishes annual SOC 2 Type 2 reports via the PayPal
+    Trust Center.
+  source: https://www.paypal-trustcenter.com/
+- id: oauth2
+  conforms: false
+  evidence: >-
+    Venmo does not publish a standalone OAuth2 authorization surface. The historical
+    developer.venmo.com OAuth API is no longer offered to new developers.
+  source: https://developer.venmo.com/
+- id: rfc9457
+  conforms: false
+  evidence: No first-party Venmo OpenAPI is published to assert an RFC 9457 problem+json envelope.
+- id: fapi
+  conforms: false
+  evidence: No published FAPI conformance claim for a Venmo-branded API.
