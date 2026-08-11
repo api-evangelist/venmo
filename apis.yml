@@ -48,6 +48,17 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: ParentCompany
+  name: PayPal
+  url: https://www.paypal.com/
+- type: Webhooks
+  url: https://developer.paypal.com/api/rest/webhooks/
+- type: Deprecation
+  url: https://developer.paypal.com/braintree/docs/guides/client-sdk/deprecation-policy/
+- type: SDKs
+  url: https://developer.paypal.com/sdk/ios/
+- type: SignUp
+  url: https://account.venmo.com/signup
 - type: Website
   url: https://www.venmo.com
 - type: DeveloperPortal
